@@ -2077,10 +2077,10 @@ var $users = $('#users');
 $(document).ready(function() {
   var client = algoliasearch('U34J99QLYK', '54ffd9b3efb53d49a130a7acdbe8742c');
   var index  = client.initIndex('lbe-products');
-  var $input = $('input');//$('#name_search').val();
+  var $input = $('input');
   $input.keyup(function() {
     index.search($input.val(), {
-      hitsPerPage: 10,
+      hitsPerPage: 12,
       facets: '*'
     }, searchCallback);
   }).focus();
@@ -2094,13 +2094,26 @@ function searchCallback(err, content) {
   }
   console.log(content);
 	var $users = $('#users');
+	//$('.results').val('<h2>Products</h2>');
 	$users.empty();
 	
 	for (var i = 0; i < content.hits.length; i++) {
-		$users.append('<li>' + content.hits[i].title + '</li>');
+		$users.append('<li><div class="img_div"><img src="'+ content.hits[i].image +'" width="50" /></div><div class="title_div">' + content.hits[i].title + '<br>'+ content.hits[i].sku  +'</div></li>');
 	}
 };
 </script>
+
+<style>
+.results{}
+#users{list-style: none; padding-left: 0px;border: 1px solid #dddddd;}
+#users li {border-bottom: 1px solid #dddddd; margin-bottom: 10px;}
+.img_div{width: auto;float: left; margin-right: 10px; margin-left: 5px;}
+.title_div{}
+</style>
+
+
+
+
 
 <script>(function( NETO, $, undefined ) { NETO.systemConfigs = {"currency_symbol":"$"}; }( window.NETO = window.NETO || {}, jQuery ));</script>
 
