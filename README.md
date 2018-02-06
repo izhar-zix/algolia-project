@@ -2,7 +2,10 @@
 
 ## Description
 
-We have a search database on Algolia. 
+We have a search database on [Algolia](https://www.algolia.com/doc/). 
+
+
+Developer documentation on [Algolia can be found here](https://www.algolia.com/doc/).
 We'd like to have a drop down interface on our site search that looks like the image below: 
 
 <img src="https://raw.githubusercontent.com/schappim/algolia-project/master/dropdown-example.png" width=383 style="width:383px!important;"/>
@@ -17,18 +20,19 @@ We'd like to have a drop down interface on our site search that looks like the i
   - The search results provide a link to the full quality version of the image e.g.: `https://www.littlebirdelectronics.com.au/assets/full/PL-2191.jpg`. This needs to be changed client side to `https://www.littlebirdelectronics.com.au/assets/thumb/PL-2191.jpg` where `full` has been replaced with `thumb`.
   - Images should preserve original aspect ratio.
 - The content from the `"sku"` key should should be included (where the price is in the attached example).
-  
+- A maximum of 12 results should be shown at any time.
+
 
 ## Deliverables
 
-- Code should be checked into this repository
-- A maximum of 12 results should be shown at any time.
+- Code should be checked (in a working state) into this repository
 - Javascript and CSS files that achieve the above.
 
 
 ## Important Information 
 
 
+- Index name: **lbe-products**
 - Application ID: **U34J99QLYK**
 - Search Only API Key: ***54ffd9b3efb53d49a130a7acdbe8742c***
 
@@ -46,6 +50,3 @@ Example Record:
       "handle": "https://www.littlebirdelectronics.com.au/arduino-uno-r3"
 }
 ```
-
-
-
