@@ -12,11 +12,20 @@ We'd like to have a drop down search interface on our site search that looks lik
 
 The drop down search interface is to be activated when the user searchs for a product on our website. 
 
+This is an example of a drop down search interface: 
+<img src="https://github.com/algolia/autocomplete.js/blob/master/examples/basic.gif"  width=383 />
+
+Please note the search result rows should have the following structure: 
+
+<img src="https://raw.githubusercontent.com/schappim/algolia-project/master/example-row.png" width=383 style="width:383px!important;"/>
+
 A static HTML page `index.html` has been provided for you to code against.
 
 ## Requirements
 
 - The dropdown should have the text "Products" as a header
+- Your code should be disabled when used on a mobile device, and should not interfer with the exisiting search system. I.e. the search box should fall back to the exisitng search system.
+- Hitting the "return key" when content is in the search box should fall back to the existing search system. 
 - Clicking anywhere on a result row should take the user to the content in the `handle` key.
 - The matched strings should be bold. 
   - A class in the css called ".matched" should be used so it is easy to change the formatting in the future
