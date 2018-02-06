@@ -5,7 +5,7 @@
 We have a search database on Algolia. 
 We'd like to have a drop down interface on our site search that looks like the image below: 
 
-![Example Search Dropdown](https://raw.githubusercontent.com/schappim/algolia-project/master/dropdown-example.png)
+<img src="https://raw.githubusercontent.com/schappim/algolia-project/master/dropdown-example.png" style="max-width:50%;"/>
 
 ## Requirements
 
@@ -29,8 +29,8 @@ We'd like to have a drop down interface on our site search that looks like the i
 ## Important Information 
 
 
-Application ID: **U34J99QLYK**
-Search Only API Key: ***54ffd9b3efb53d49a130a7acdbe8742c***
+- Application ID: **U34J99QLYK**
+- Search Only API Key: ***54ffd9b3efb53d49a130a7acdbe8742c***
 
 Example Record: 
 
