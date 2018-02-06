@@ -59,10 +59,10 @@ ga('create', 'UA-1590646-1', 'auto');
 <div class="col-xs-12 col-sm-4">
 <div class="header-search">
 <form name="productsearch" method="get" action="https://www.littlebirdelectronics.com/" role="search" aria-label="Product Search">
-<input type="hidden" name="rf" value="kw" />
 <div class="input-group">
-    <input class="form-control ajax_search" value="" id="name_search" autocomplete="off" name="kw" type="search" aria-label="Input Search" />
+    <input class="form-control ajax_search" type="text" value="" id="name_search" autocomplete="off" name="kw" aria-label="Input Search" />
     <span class="input-group-btn">
+    <input type="hidden" name="rf" value="kw" />
     <button type="submit" value="Search" class="btn btn-default" aria-label="Search Site"><i class="fa fa-search"></i></button>
     </span>
 </div>
@@ -2078,7 +2078,7 @@ $(document).ready(function() {
   var client = algoliasearch('U34J99QLYK', '54ffd9b3efb53d49a130a7acdbe8742c');
   var index  = client.initIndex('lbe-products');
   var $input = $('input');
-  $input.keyup(function() {
+  $input.keyup(function(){
     index.search($input.val(), {
       hitsPerPage: 12,
       facets: '*'
@@ -2107,10 +2107,11 @@ function searchCallback(err, content) {
 <style>
 .results{position: absolute;z-index: 99999999999;background: white;width: 359px;}
 #users{list-style: none; padding-left: 0px;border: 1px solid #dddddd;border-top: none;}
-#users li {border-bottom: 1px solid #dddddd; margin-bottom: 10px;}
+#users li {border-bottom: 1px solid #dddddd; margin-bottom: 10px; height:60px;}
+#users img {padding: 5px;}
 .img_div{width: auto;float: left; margin-right: 10px; margin-left: 5px;border: 1px solid #dddddd;border-radius: 5px;}
 .title_div{}
-.firstli{border-bottom: none !important}
+.firstli{border-bottom: none !important; height:30px !important;}
 #users li:last-child {border-bottom: none;}
 </style>
 
