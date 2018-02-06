@@ -2099,7 +2099,7 @@ function searchCallback(err, content) {
 	$users.append('<li class="firstli"><h2>Products</h2></li>');
 	for (var i = 0; i < content.hits.length; i++) {
 		image = content.hits[i].image.replace("/full/", "/thumb/")
-		$users.append('<li><a href="'+ content.hits[i].handle +'"><div class="img_div"><img src="'+ image +'" width="50" /></div><div class="title_div"><p class="title_p">' + content.hits[i].title + '</p><br><p class="sku_p">'+ content.hits[i].sku  +'</p></div></a></li>');
+		$users.append('<li><a href="'+ content.hits[i].handle +'"><div class="img_div"><img src="'+ image +'" width="50" /></div><div class="title_div"><p class="title_p">' + content.hits[i].title + '<br>'+ content.hits[i].sku  +'</p></div></a></li>');
 	}
 };
 </script>
