@@ -2094,21 +2094,24 @@ function searchCallback(err, content) {
   }
   console.log(content);
 	var $users = $('#users');
-	//$('.results').val('<h2>Products</h2>');
+	$('.results').val('<h2>Products</h2>');
 	$users.empty();
-	
+	$users.append('<li class="firstli"><h2>Products</h2></li>');
 	for (var i = 0; i < content.hits.length; i++) {
-		$users.append('<li><div class="img_div"><img src="'+ content.hits[i].image +'" width="50" /></div><div class="title_div">' + content.hits[i].title + '<br>'+ content.hits[i].sku  +'</div></li>');
+		image = content.hits[i].image.replace("/full/", "/thumb/")
+		$users.append('<li><a href="'+ content.hits[i].handle +'"><div class="img_div"><img src="'+ image +'" width="50" /></div><div class="title_div"><p class="title_p">' + content.hits[i].title + '</p><br><p class="sku_p">'+ content.hits[i].sku  +'</p></div></a></li>');
 	}
 };
 </script>
 
 <style>
-.results{}
-#users{list-style: none; padding-left: 0px;border: 1px solid #dddddd;}
+.results{position: absolute;z-index: 99999999999;background: white;width: 359px;}
+#users{list-style: none; padding-left: 0px;border: 1px solid #dddddd;border-top: none;}
 #users li {border-bottom: 1px solid #dddddd; margin-bottom: 10px;}
-.img_div{width: auto;float: left; margin-right: 10px; margin-left: 5px;}
+.img_div{width: auto;float: left; margin-right: 10px; margin-left: 5px;border: 1px solid #dddddd;border-radius: 5px;}
 .title_div{}
+.firstli{border-bottom: none !important}
+#users li:last-child {border-bottom: none;}
 </style>
 
 
