@@ -34,7 +34,7 @@ We'd like to have a drop down interface on our site search that looks like the i
 
 - Index name: **lbe-products**
 - Application ID: **U34J99QLYK**
-- Search Only API Key: ***54ffd9b3efb53d49a130a7acdbe8742c***
+- Search Only API Key: **54ffd9b3efb53d49a130a7acdbe8742c**
 
 Example Record: 
 
