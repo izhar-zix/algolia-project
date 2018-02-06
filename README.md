@@ -13,6 +13,8 @@ We'd like to have a drop down search interface on our site search that looks lik
 The drop down search interface is to be activated when the user searchs for a product on our website. 
 
 This is an example of a drop down search interface: 
+
+
 <img src="https://github.com/algolia/autocomplete.js/blob/master/examples/basic.gif"  width=383 />
 
 Please note the search result rows should have the following structure: 
